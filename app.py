@@ -157,3 +157,9 @@ with st.expander("Engineering & Surrogate Error Analysis (Methodology Notes)"):
         * **Management Trade-Off:** Increasing payload lowers unit launch cost (€/kg) until trajectory energy drops below the $7,750\\text{ m/s}$ orbital insertion threshold, creating a sharp cliff between maximum margin and total mission loss.
         """
     )
+from pathlib import Path
+
+memo_file = Path("TRADE_STUDY_MEMO.md")
+if memo_file.exists():
+    with st.expander("Systems Engineering & Commercial Trade-Study Memo (5,000-Run Analysis)"):
+        st.markdown(memo_file.read_text(encoding="utf-8"))
